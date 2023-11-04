@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import { Sidebar, Videos } from "../components";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
+import { Link } from "react-router-dom";
 
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState("New");
@@ -34,7 +35,14 @@ const Feed = () => {
           variant="body2"
           sx={{ my: 1.5, color: "#fff" }}
         >
-          Copyright 2023 ANU1o
+          Copyright 2023{" "}
+          <Link
+            to="https://anu1o.netlify.app"
+            target="_blank"
+            style={{ color: "#FC1503" }}
+          >
+            ANU1o
+          </Link>
         </Typography>
       </Box>
       <Box p={1} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
